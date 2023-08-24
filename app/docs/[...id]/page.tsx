@@ -1,9 +1,11 @@
+import styles from "./style.module.css"
+
 const page = ({params}) => {
 
   console.log(params.id);
     
   return (
-    <div>hey am a dynamic route and my name is : {params.id}</div>
+    <div className={styles.title}>hey am a dynamic route and my name is : {params.id}</div>
   )
 }
 
