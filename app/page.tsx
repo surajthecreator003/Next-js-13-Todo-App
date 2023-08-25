@@ -1,9 +1,20 @@
-import Image from 'next/image'
+import NewTodoForm from "@/components/NewTodoForm"
 
-export default function Home() {
+
+const getData=async()=>{
+  await new Promise((res)=>{setTimeout(()=>res(0),2000)});
+  return {data:[1,2,3]}
+}
+
+
+const Home=async()=>{
+  const data=await getData();
+  console.log("data:",data);
   return (
-    <main className="flex min-h-screen flex-col items-center justify-between p-24">
-      Home
-    </main>
+    <div>
+      <NewTodoForm serializable={{a:1,b:"No functions Plzz"}}/>
+    </div>
   )
 }
+
+export default Home;
