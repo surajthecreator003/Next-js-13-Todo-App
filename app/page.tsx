@@ -1,18 +1,10 @@
-import NewTodoForm from "@/components/NewTodoForm"
+//Backup page.tsx in components folder named page_for_root_folder.tsx
+//here we will make a form which will submit entirely without using javscript
 
-
-const getData=async()=>{
-  await new Promise((res)=>{setTimeout(()=>res(0),2000)});
-  return {data:[1,2,3]}
-}
-
-
-const Home=async()=>{
-  const data=await getData();
-  console.log("data:",data);
+const Home=()=>{  
   return (
     <div>
-      <NewTodoForm serializable={{a:1,b:"No functions Plzz"}}/>
+     Home
     </div>
   )
 }
